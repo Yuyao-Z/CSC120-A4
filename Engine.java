@@ -1,13 +1,13 @@
 public class Engine {
-   double fuellevel;
-private Engine.FuelType fuelType;
+    double fuellevel;
+    private Engine.FuelType fuel;
+    public enum FuelType {
+        STEAM, INTERNAL_COMBUSTION, ELECTRIC, OTHER;
+    }
+    
 
-   public enum FuelType {
-    STEAM, INTERNAL_COMBUSTION, ELECTRIC, OTHER;
-}
-
-   Engine(FuelType fuelType, double fuellevel){
-    this.fuelType = fuelType;
+   Engine(FuelType fuel, double fuellevel){
+    this.fuel = fuel;
     this.fuellevel = fuellevel; 
    }
     public double refuel(double maxlevel){
@@ -21,7 +21,13 @@ private Engine.FuelType fuelType;
             fuellevel -= cost;
             break;
         }
-        return abovezero;
+        return abovezero;}
+        public static void main(String[] args) {
+            Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
+            while (myEngine.go()) {
+                System.out.println("Choo choo!");
+            }
+            System.out.println("Out of fuel.");}
         
     }
     
@@ -29,6 +35,6 @@ private Engine.FuelType fuelType;
    
 
 
-}
+
      
     

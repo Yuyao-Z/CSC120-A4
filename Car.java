@@ -16,7 +16,7 @@ public class Car {
     
         public boolean addPassenger(Passenger p){
             if (seatsRemaining() > 0){
-                passengers.add(p);
+                this.passengers.add(p);
                 return true;
             }else{
                 return false;}}
@@ -28,9 +28,11 @@ public class Car {
             }else{
                 return false;
             }}
-        private void printManifest(){
+        public void printManifest(){
             if (passengers.size() > 0 ){
-                System.out.println(passengers);
+                for (Passenger passenger:passengers){
+                    System.out.println(passenger.name);
+                }
             }else{
                 System.out.println("This car is EMPTY.");
             }
