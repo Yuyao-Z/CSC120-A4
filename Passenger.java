@@ -1,3 +1,7 @@
+/**represents the passengers on the train
+ * uses methods from car file to add a passenger or remove a passenger  and stores the name of the passengers.
+ */
+
 public class Passenger {
     
     public String name;

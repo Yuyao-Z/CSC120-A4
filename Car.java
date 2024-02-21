@@ -1,6 +1,7 @@
 import java.util.ArrayList;
-/**
- * 
+/**represents a car that stores information of passengers on board and  the capacity of the car
+ * stores information about passenfers onboard and capacity of the car and be taken as a group, car, in the train file and responsible for adding and removing a passenger from the train.
+ * provides passenger information for train file. 
  */
 public class Car {
     static ArrayList<Passenger> passengers = new ArrayList();

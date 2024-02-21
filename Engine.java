@@ -1,3 +1,7 @@
+/**represents an engine that stores the fuel level and the type of fuel the train uses. 
+ * stores information about the engine of the train. 
+ */
+
 public class Engine {
     double fuellevel;
     Engine.FuelType fuel;

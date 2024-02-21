@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+/**represents train in this project
+ * uses methods, classes and variables from other files to creat an engine, gets information about train/a car in it, and prints out all the information.
+ * the main file in this projects.
+ */
 public class Train {
     Engine myengine;
     ArrayList<Car> cars = new ArrayList<>();
