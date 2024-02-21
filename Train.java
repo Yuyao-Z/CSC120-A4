@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
-// import Car;
 public class Train {
     Engine myengine;
     ArrayList<Car> cars = new ArrayList<>();
@@ -20,35 +18,42 @@ public class Train {
             car = new Car(passengerCapacity/nCars, p);
             this.cars.add(car);}
     }
+    /**creat a new engine */
     public Engine getEngine;{
         Engine getEngine = new Engine(fuelType, fuelCapacity);
-    }public Car getCar(int i){
+    }
+    /**get a specific car according to its assigned number in the list */
+    public Car getCar(int i){
         return cars.get(i);
-    }public int getMaxCapacity(){
-       ArrayList<Integer> numbers = new ArrayList<>();
+    }
+     /** return the maximum total capacity across all `Car`s
+     * 
+     * @return the sum of the number of maximum seats of all cars
+     */
+    public double getMaxCapacity(){
+       double sum = 0;
         for (Car car:cars){
-            numbers.add(car.max);
+            sum += car.max;
        }
-       return Collections.max(numbers);
+       return sum;
+    /**finds out how many seats remaining in the train
+     * @return the sum of remaining seats in each car
+     */
     }public int seatsRemaining(){
         int sum = 0;
         for (Car car:cars){
             sum += car.max - car.passengers.size();
         }
         return sum;
+    /**prints out the passenger information on the car
+     */
     }public void printManifest(){
         for (Car car:cars){
             car.printManifest();
             }
         }
     
-    public static void main(String[] args) {
-        Train mytrain = new Train(Engine.FuelType.STEAM, 90, 1, 70);
-        Passenger maria = new Passenger("Maria");
-        Passenger mike = new Passenger("Mike");
-        mytrain.getCar(0).addPassenger(maria);  
-        mytrain.getCar(0).addPassenger(mike);  
-        mytrain.printManifest();
-    }}
+
+    }
 
 

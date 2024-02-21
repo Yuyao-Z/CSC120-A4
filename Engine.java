@@ -1,6 +1,6 @@
 public class Engine {
     double fuellevel;
-    private Engine.FuelType fuel;
+    Engine.FuelType fuel;
     public enum FuelType {
         STEAM, INTERNAL_COMBUSTION, ELECTRIC, OTHER;
     }
@@ -10,9 +10,18 @@ public class Engine {
     this.fuel = fuel;
     this.fuellevel = fuellevel; 
    }
+   /**reset the current fuel level to maximum
+    * 
+    * @param maxlevel the maximum fuel level for this engine
+    * @return the current fuel level tha equeals to the maximum fuel level of the engine
+    */
     public double refuel(double maxlevel){
         fuellevel = maxlevel;
         return fuellevel;}
+    /**decrease the current fuel level, print some useful information, and print out whether there is fuel left after the decrement
+     * 
+     * @return whether there is fuel 
+     */
     public boolean go(){
         int cost = 25;
         boolean abovezero = fuellevel > 0;
@@ -22,19 +31,6 @@ public class Engine {
             break;
         }
         return abovezero;}
-        public static void main(String[] args) {
-            Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
-            while (myEngine.go()) {
-                System.out.println("Choo choo!");
-            }
-            System.out.println("Out of fuel.");}
+
         
     }
-    
-   
-   
-
-
-
-     
-    
