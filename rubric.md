@@ -48,14 +48,14 @@ __Yes___ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
       ___Yes__ Classes & class members all have Javadoc header comments
 
-      _____ Clear and consistent indentation of bracketed sections
+      ___Yes__ Clear and consistent indentation of bracketed sections
 
-      _____ Adheres to Java conventions on naming & capitalization
+      ___Yes__ Adheres to Java conventions on naming & capitalization
 
-      _____ Methods & variables all have clear and accurate names
+      ___Yes__ Methods & variables all have clear and accurate names
 
-      _____ Methods avoid confusing side effects
+      ___Yes__ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission (including completed `rubric.md` file)
+___Yes__ 1 pt: All required files included with submission (including completed `rubric.md` file)
 
-_____ 1 pt: `reflection.md` contains your reflection on the assignment
+___Yes__ 1 pt: `reflection.md` contains your reflection on the assignment
